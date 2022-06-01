@@ -1,9 +1,22 @@
 const http = require('http')
 const httpPort = 3000
 
+const fs = require('fs')
+
 const httpServer = http.createServer((req, res)=> {
-  res.write('hello there')
-  res.end()
+  
+  fs.readFile('front/index.html', (error, data)=> {
+    if(error) {
+      res.writeHead(500, { 'Content-Type': 'app/json' })
+      res.write({ error: 'an error ocurred'})
+    } else {
+      res.writeHead(200, { 'Content-Type': 'text/html' })
+      res.write(data)
+    }
+    res.end()
+  })
+  // res.write('hello there')
+  // res.end()
 })
 
 httpServer.on('listening', ()=> { console.log('Server listening on: ' + httpPort) })
