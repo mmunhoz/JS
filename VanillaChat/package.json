@@ -1,0 +1,25 @@
+{
+  "name": "vanillachat",
+  "version": "0.0.1",
+  "description": "simple webchat with node and vanilla js",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmunhoz/JS.git"
+  },
+  "keywords": [
+    "nodejs",
+    "vanilla",
+    "js"
+  ],
+  "author": "Marcos Munhoz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mmunhoz/JS/issues"
+  },
+  "homepage": "https://github.com/mmunhoz/JS#readme"
+}
